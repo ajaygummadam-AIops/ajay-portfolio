@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,10 +108,10 @@ nav {
 
 h1.hero-name {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3.8rem, 6.5vw, 6rem);
-  font-weight: 900; line-height: 0.95;
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-weight: 900; line-height: 1.05;
   color: var(--ink); letter-spacing: -0.02em;
-  margin-bottom: 18px;
+  margin-bottom: 18px; white-space: nowrap;
   animation: fadeUp 0.7s 0.2s ease both;
 }
 .hero-tagline {
@@ -636,7 +637,7 @@ footer {
   <div class="hero-left">
     <div>
       <div class="hero-eyebrow">Available for New Opportunities</div>
-      <h1 class="hero-name">G. Ajay<br>Kumar</h1>
+      <h1 class="hero-name">G. Ajay Kumar</h1>
       <p class="hero-tagline"><strong>Scrum Master</strong> · Delivery Manager · Agile Coach</p>
       <p class="hero-desc">I am a Certified Scrum Master with 11+ years of experience leading Agile delivery across IT and SaaS environments. I specialise in facilitating high-performing sprint teams, removing blockers before they stall momentum, and building delivery transparency that earns stakeholder trust. My edge is combining servant leadership with Power BI-driven decision making — turning retrospective insights into measurable improvements, sprint after sprint.</p>
       <div class="hero-btns">
@@ -1126,10 +1127,10 @@ footer {
         I'm open to Scrum Master, Delivery Manager, and Agile Coach opportunities — with a strong preference for teams that value transparency, servant leadership, and continuous improvement.
       </p>
       <div class="contact-cards">
-        <a href="mailto:ajay.gummadam@gmail.com" class="cc">
+        <a href="/cdn-cgi/l/email-protection#01606b60782f66746c6c6065606c41666c60686d2f626e6c" class="cc">
           <div class="cc-icon">✉️</div>
           <div class="cc-label">Email</div>
-          <div class="cc-val">ajay.gummadam@gmail.com</div>
+          <div class="cc-val"><span class="__cf_email__" data-cfemail="cbaaa1aab2e5acbea6a6aaafaaa68baca6aaa2a7e5a8a4a6">[email&#160;protected]</span></div>
         </a>
         <a href="tel:+919535612234" class="cc">
           <div class="cc-icon">📱</div>
@@ -1142,7 +1143,7 @@ footer {
           <div class="cc-val">linkedin.com/in/ajaya-kumar-g</div>
         </a>
       </div>
-      <a href="mailto:ajay.gummadam@gmail.com" class="btn-contact">📩 Hire Me — Let's Build Something Great</a>
+      <a href="/cdn-cgi/l/email-protection#7c1d161d05521b0911111d181d113c1b111d1510521f1311" class="btn-contact">📩 Hire Me — Let's Build Something Great</a>
     </div>
   </div>
 </section>
@@ -1191,7 +1192,7 @@ footer {
   <button class="chat-fab" onclick="toggleChat()">💬</button>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* NAV shadow on scroll */
 window.addEventListener('scroll', () => {
   document.querySelector('nav').style.boxShadow =
@@ -1216,14 +1217,4 @@ function sendChat() {
   const v = inp.value.trim(); if (!v) return;
   addMsg(v, 'usr'); inp.value = '';
   const k = Object.keys(answers).find(k => v.toLowerCase().includes(k.replace('?', '')));
-  setTimeout(() => addMsg(k ? answers[k] : 'Please reach Ajay at ajay.gummadam@gmail.com!', 'bot'), 380);
-}
-function addMsg(t, type) {
-  const box = document.getElementById('chatMsgs');
-  const d = document.createElement('div');
-  d.className = 'cmsg ' + type; d.textContent = t;
-  box.appendChild(d); box.scrollTop = box.scrollHeight;
-}
-</script>
-</body>
-</html>
+  setTimeout(() => addMsg(k ? answers[k] : 'Please reach Ajay at aj
