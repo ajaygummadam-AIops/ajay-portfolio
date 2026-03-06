@@ -1234,20 +1234,15 @@ window.addEventListener('scroll', () => {
     window.scrollY > 40 ? '0 4px 28px rgba(0,0,0,0.55)' : 'none';
 });
 
-/* Chat */
-const answers = {
-  'open roles?': 'Ajay is actively open to Scrum Master, Delivery Manager, and Agile Coach roles in IT and SaaS. Email: ajay.gummadam@gmail.com',
-  'experience': 'Ajay has 11+ years of experience. Currently Scrum Master & Delivery Manager at Syvora Ventures. Previously Manager/Scrum Master at Edusys — 18% productivity gain, 90% client satisfaction.',
-  'certifications': 'Certified Scrum Master (SMC), Microsoft Power BI Data Analyst, AI for Project Managers (PMI), Six Sigma Yellow Belt, AI & Agility (Scrum Alliance), Project Management Foundation.',
-  'contact': 'Email: ajay.gummadam@gmail.com | Phone: +91 9535612234 | LinkedIn: linkedin.com/in/ajaya-kumar-g'
-};
-function toggleChat() { document.getElementById('chatPanel').classList.toggle('open'); }
-function qa(q) {
-  addMsg(q, 'usr');
-  const r = answers[q.toLowerCase()] || 'Please reach Ajay directly at ajay.gummadam@gmail.com for more details!';
-  setTimeout(() => addMsg(r, 'bot'), 380);
+
+/* CHAT FUNCTIONS */
+
+function toggleChat() {
+  document.getElementById("chatPanel").classList.toggle("open");
 }
-   function addMsg(text, type) {
+
+
+function addMsg(text, type) {
 
   const chat = document.getElementById("chatMsgs");
 
@@ -1259,6 +1254,8 @@ function qa(q) {
 
   chat.scrollTop = chat.scrollHeight;
 }
+
+
 async function sendChat() {
 
   const inp = document.getElementById("chatInp");
@@ -1267,6 +1264,7 @@ async function sendChat() {
   if (!message) return;
 
   addMsg(message, "usr");
+
   inp.value = "";
 
   try {
@@ -1287,7 +1285,19 @@ async function sendChat() {
 
   } catch (error) {
 
-    addMsg("⚠️ Sorry, the AI assistant is temporarily unavailable.", "bot");
+    addMsg("⚠️ AI assistant is temporarily unavailable.", "bot");
 
   }
+
+}
+
+
+function qa(question) {
+
+  addMsg(question, "usr");
+
+  setTimeout(() => {
+    addMsg("Let me check that for you...", "bot");
+  }, 300);
+
 }
