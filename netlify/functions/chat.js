@@ -1,5 +1,14 @@
 export async function handler(event) {
 
+  if (!event.body) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        reply: "Chatbot is running. Send a POST request with a message."
+      })
+    };
+  }
+
   const body = JSON.parse(event.body);
   const message = body.message;
 
@@ -14,7 +23,7 @@ export async function handler(event) {
       messages: [
         {
           role: "system",
-          content: "You are an assistant for Ajay Kumar's portfolio. Ajay is a Scrum Master and Delivery Manager with expertise in Agile delivery, sprint planning, stakeholder management, and Power BI reporting."
+          content: "You are an assistant for Ajay Kumar's portfolio. Ajay is a Scrum Master and Delivery Manager experienced in Agile delivery, sprint planning, stakeholder management, and Power BI reporting."
         },
         {
           role: "user",
